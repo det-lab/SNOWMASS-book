@@ -1,0 +1,362 @@
+%%  This is the driver file for working group reports contributed 
+%%   to the Snowmass 2021 proceedings
+
+%%  This file includes brings in all the necessary files to provide the
+%%  format of the Proceedings
+%%    Thanks to:
+%%  D. Hitlin   9/23/03   derived from the BABAR Physics Book format
+
+%%  Please do not change anything in this file
+
+%%  To use LATEX with this format, you must have the follwing files 
+%%  in the same directory as your text source and figure files
+%%  tcibook.cls
+%%  fancyhea.sty
+%%  work.sty
+%%  epsfig.sty
+%%  workshopsym.tex       This file provides macros for many common symbols
+%%                         Using these macros will provide uniformity of notation
+%%                         for the basic particle symbols, units, etc.
+%%
+%%  These provide the page size, type style, headings, etc.
+
+
+\documentclass{tcibook}
+\usepackage{fancyhea}
+\usepackage{work}
+\usepackage{bm}       %    enables bold math symbols  e.g.  \bm{\gamma}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{lineno}
+\usepackage{threeparttable}
+\usepackage[normalem]{ulem}
+\usepackage{color}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+
+\input workshopsymbols.tex     
+ %   standard macros for common HEP terms
+%      and macros for common journal names
+ 
+
+
+
+\setlength{\headheight}{14pt}
+
+% subsubsections are numbered as well as chapters, sections and subsections.
+\setcounter{secnumdepth}{3}
+
+\def\authorlist#1#2{
+    \vskip 0.4in
+\begin{center}\begin{large} {\bf  #1 } \end{large}
+    \vskip 0.2in
+              #2
+     \vskip 0.2in
+   \end{center}
+}
+
+\begin{document}
+
+%%  uncomment this line to use line numbers in drafts:
+%\linenumbers
+
+
+
+\pagenumbering{roman}
+
+\parindent=0pt
+\parskip=8pt
+\setlength{\evensidemargin}{0pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\marginparsep}{0.0in}
+\setlength{\marginparwidth}{0.0in}
+\marginparpush=0pt
+
+% The content begins here
+
+\pagenumbering{arabic}
+
+\renewcommand{\chapname}{chap:intro_}
+\renewcommand{\chapterdir}{.}
+\renewcommand{\arraystretch}{1.25}
+\addtolength{\arraycolsep}{-3pt}
+
+% \thispagestyle{empty}
+% \begin{centering}
+% \mbox{\null}
+% \rightline{\begin{tabular}{l}
+% FERMILAB-CONF-xx\\
+% SLAC-PUB-xx\\
+%  \end{tabular}}
+% \vfill
+
+% {\Huge\bf The Future of US Particle Physics}
+
+% \vskip 0.6in
+
+% {\LARGE \bf Report of the 2021  US  Community Study  \\
+%      on the Future of Particle Physics
+
+   
+%                   \smallskip
+
+%        organized by the  APS Division of Particles and Fields}
+
+% \vfill
+
+
+% \input Frontmatter/mainauthorlist.tex
+
+
+% \vfill
+
+% \end{centering}
+
+% \newpage
+% \thispagestyle{empty}
+
+% \mbox{\null}
+
+% \newpage
+
+%\pagenumbering{roman}
+% \input Frontmatter/Foreword.tex 
+
+% \newpage
+% \thispagestyle{empty}
+
+% \mbox{\null}
+
+
+% \newpage
+
+% \input Frontmatter/ExecutiveSummary.tex
+
+% \newpage
+% \thispagestyle{empty}
+
+% \tableofcontents
+
+% \newpage
+%  \pagenumbering{arabic}
+
+
+% \input Frontmatter/Summary.tex
+
+% \newpage
+% \thispagestyle{empty}
+
+% \mbox{\null}
+
+%\input Energy/Energy.tex
+
+% \newpage
+% \thispagestyle{empty}
+% \mbox{\null}
+
+% \input Neutrino/Neutrino.tex 
+
+% \input Rare/Rare.tex
+
+% \input Cosmic/Cosmic.tex
+
+% \input Theory/Theory.tex
+
+% \input Accelerator/Accelerator.tex
+
+% \input Instrumentation/Instrumentation.tex
+
+% \input Computation/Computation.tex
+
+% \input Underground/Underground.tex 
+
+% \input Engagement/Engagement.tex
+
+% \input Frontmatter/Conclusion.tex
+
+% \newpage
+% \thispagestyle{empty}
+
+% \mbox{\null}
+
+
+% \input Frontmatter/Glossary.tex 
+
+% % \end{document}
+
+% \newpage
+% \thispagestyle{empty}
+% \mbox{\null}
+
+% \input Energy/Header.tex
+% \input Energy/EF01/HiggsProperties.tex
+% \input Energy/EF02/HiggsNewPhysics.tex
+% \input Energy/EF03/HeavyFlavor.tex
+% \input Energy/EF04/PrecisionEW.tex
+% \input Energy/EF05/PrecisionQCD.tex
+% \input Energy/EF06/HadronicStructure.tex
+% \input Energy/EF07/HeavyIons.tex
+% \input Energy/EF08/BSMModels.tex
+% \input Energy/EF09/BSMGeneral.tex
+% \input Energy/EF10/BSMDarkMatter.tex
+
+
+
+
+
+% \newpage
+% \thispagestyle{empty}
+% \mbox{\null}
+
+
+% \input Neutrino/Header.tex
+\input Neutrino/NF01/Oscillations.tex
+% \input Neutrino/NF02/Anomalies.tex
+% \input Neutrino/NF03/BSM.tex
+% \input Neutrino/NF04/NaturalSources.tex
+% \input Neutrino/NF05/Properties.tex
+% \input Neutrino/NF06/CrossSections.tex
+% \input Neutrino/NF07/Applications.tex
+%   %  NF08 is skipped intentionally, and 9 and 10 are given 
+%   %    chapter numbers 8 and 9
+% \input Neutrino/NF09/ArtificialSources.tex
+% \input Neutrino/NF10/Detectors.tex
+
+
+%  \newpage
+% \thispagestyle{empty}
+%  \mbox{\null}
+
+% \input Rare/Header.tex
+% \input Rare/RF01/bcquarks.tex
+% \input Rare/RF02/lightquarks.tex
+% \input Rare/RF03/FundamentalPhysics.tex
+% \input Rare/RF04/BLViolation.tex
+% \input Rare/RF05/LeptonFlavor.tex
+% \input Rare/RF06/DarkSector.tex
+% \input Rare/RF07/Hadrons.tex
+
+
+
+
+%  \newpage
+% \thispagestyle{empty}
+%  \mbox{\null}
+
+% \input Cosmic/Header.tex
+% \input Cosmic/CF01/DarkParticles.tex
+% \input Cosmic/CF02/DarkWaves.tex
+% \input Cosmic/CF03/DarkMatterProbes.tex
+% \input Cosmic/CF04/CosmicAcceleration.tex
+% \input Cosmic/CF05/CosmicDawn.tex
+% \input Cosmic/CF06/DarkEnergyProbes.tex
+% \input Cosmic/CF07/FundamentalPhysics.tex
+
+
+%  \newpage
+% \thispagestyle{empty}
+%  \mbox{\null}
+
+% \input Theory/Header.tex
+% \input Theory/TF01/Strings.tex
+% \input Theory/TF02/EffectiveFT.tex
+% \input Theory/TF03/Conformal.tex
+% \input Theory/TF04/Amplitudes.tex
+% \input Theory/TF05/Lattice.tex
+% \input Theory/TF06/Precision.tex
+% \input Theory/TF07/Colliders.tex
+% \input Theory/TF08/BSM.tex
+% \input Theory/TF09/AstroParticle.tex
+% \input Theory/TF10/QuantumInfo.tex
+% \input Theory/TF11/Neutrinos.tex
+
+
+
+%  \newpage
+% \thispagestyle{empty}
+%  \mbox{\null}
+
+
+% \input Accelerator/Header.tex
+% \input Accelerator/AF01/Beams.tex
+% \input Accelerator/AF02/Neutrinos.tex
+% \input Accelerator/AF03/EWHiggs.tex
+% \input Accelerator/AF04/MultiTeV.tex
+% \input Accelerator/AF05/RareProcesses.tex
+% \input Accelerator/AF06/Advanced.tex
+% \input Accelerator/AF07/Technology.tex 
+
+%  \newpage
+% \thispagestyle{empty}
+%  \mbox{\null}
+
+
+% \input Instrumentation/Header.tex
+% \input Instrumentation/IF01/Quantum.tex
+% \input Instrumentation/IF02/Photons.tex
+% \input Instrumentation/IF03/Tracking.tex
+% \input Instrumentation/IF04/TDAQ.tex
+% \input Instrumentation/IF05/Gas.tex
+% \input Instrumentation/IF06/Calorimetry.tex
+% \input Instrumentation/IF07/Electronics.tex
+% \input Instrumentation/IF08/Noble.tex
+% \input Instrumentation/IF09/Integration.tex
+% \input Instrumentation/IF10/Radio.tex
+
+
+%  \newpage
+% \thispagestyle{empty}
+%  \mbox{\null}
+
+
+% \input Computation/Header.tex
+% \input Computation/CompF01/Experimental.tex
+% \input Computation/CompF02/Simulation.tex
+% \input Computation/CompF03/ML.tex
+% \input Computation/CompF04/Storage.tex
+% \input Computation/CompF05/EndUser.tex
+% \input Computation/CompF06/Quantum.tex
+% \input Computation/CompF07/Preservation.tex
+
+
+%  \newpage
+% \thispagestyle{empty}
+%  \mbox{\null}
+
+
+% \input Underground/Header.tex
+% \input Underground/UF01/Neutrinos.tex
+% \input Underground/UF02/Cosmic.tex
+% \input Underground/UF03/Detectors.tex
+% \input Underground/UF04/Support.tex
+% \input Underground/UF05/Synergies.tex
+% \input Underground/UF06/Infrastructure.tex
+
+
+%  \newpage
+% \thispagestyle{empty}
+%  \mbox{\null}
+
+
+
+% \input Engagement/Header.tex
+% \input Engagement/CommF01/Applications.tex
+% \input Engagement/CommF02/Careers.tex
+% \input Engagement/CommF03/Diversity.tex
+% \input Engagement/CommF04/Education.tex
+% \input Engagement/CommF05/Outreach.tex
+% \input Engagement/CommF06/Policy.tex
+% \input Engagement/CommF07/Society.tex
+
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+
